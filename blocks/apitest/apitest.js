@@ -10,6 +10,6 @@ export default async function decorate(block) {
 
 async function getApiCall(block) {
   const response = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json').then(res => res.clone().json())
-  block.append(response);
+  block.append(JSON.stringify(response));
   console.log('response');
 }
