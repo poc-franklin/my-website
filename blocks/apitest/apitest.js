@@ -9,7 +9,7 @@ export default async function decorate(block) {
 }
 
 async function getApiCall(block) {
-  const response = await fetch('https://www.googleapis.com/books/v1/volumes?q=flowers').then(res => res.clone().json())
+  const response = await fetch('https://localhost:8443/bin/readnode').then(res => res.clone().json())
   block.append(JSON.stringify(response));
   console.log('response');
 }
