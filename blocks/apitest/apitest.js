@@ -14,7 +14,6 @@ async function getApiCall(block) {
   console.log('response');
   if (response.ok) {
     // Get JSON value from the response body
-    <div><h1>Welcome to ES6</h1></div>
     return response.json();
   }
 }
